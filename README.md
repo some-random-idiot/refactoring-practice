@@ -12,7 +12,6 @@ Each subdirectory contains some code that needs refactoring.
 
 **Changes made:**
 1. Changed the function name to conform to the snake case naming convention.
-2. Add one more blank line between the function and the import statement.
 3. Fixed the return value's syntax.
 4. Gave meaningful variable names to `args[...]`.
 5. Removed redundant else statement.
@@ -21,34 +20,16 @@ Each subdirectory contains some code that needs refactoring.
 ## `game_framework/gamelib.py`
 
 **Changes made:**
-1. Added one more blank line between the class `GameCanvasElement` and the import statements.
-2. Removed redundant parenthesis from `GameCanvasElement`.
-3. `create_canvas` no longer creates a canvas via side effect, it instead returns the canvas object.
-4. `create_canvas` no longer access the width and height class attributes directly, it takes in parameters instead.
-5. Replaced a string literal (`"news"`) with a named constant (`tk.NSEW`).
-6. Encapsulated the process adding and removing game elements.
-7. Created constant variables for `GameApp` constructor's default values.
+1. Removed redundant parenthesis from `GameCanvasElement`.
+2. `create_canvas` no longer creates a canvas via side effect, it instead returns the canvas object.
+3. `create_canvas` no longer access the width and height class attributes directly, it takes in parameters instead.
+4. Replaced a string literal (`"news"`) with a named constant (`tk.NSEW`).
+5. Encapsulated the process adding and removing game elements.
+6. Created constant variables for `GameApp` constructor's default values.
 
 ## `recipe/recipe.py` and `recipe/main.py`
 
-**Changes made:**
-
-
-This uses a `dataclass`, which requires Python 3.7.
-
-The Recipe class defines a recipe for a hot beverage with attributes:
-* name - name of the recipe
-* coffee - units of coffee
-* chocolate - units of chocolate
-* milk - units of milk
-* sugar - units of sugar
-* price - (float) price in Baht
-
-Refactor `main.py`.  What can you do to eliminate the long, boring code?
-
-
-
-
+**Change made:** Created a method for recipe creation process.
 
 
 ## Resources
