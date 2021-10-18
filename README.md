@@ -20,14 +20,19 @@ Each subdirectory contains some code that needs refactoring.
 
 ## `game_framework/gamelib.py`
 
-Look for refactorings in the class `GameApp`.
-
-* Avoid side-effects: replace side effect with return value (the caller must use the return value)
-
-* Encapsulate a collection - provide behavior that subclasses of GameApp need instead of requiring them to manipulate a collection that belongs to the GameApp class.
-  - Hint: `elements`
+**Changes made:**
+1. Added one more blank line between the class `GameCanvasElement` and the import statements.
+2. Removed redundant parenthesis from `GameCanvasElement`.
+3. `create_canvas` no longer creates a canvas via side effect, it instead returns the canvas object.
+4. `create_canvas` no longer access the width and height class attributes directly, it takes in parameters instead.
+5. Replaced a string literal (`"news"`) with a named constant (`tk.NSEW`).
+6. Encapsulated the process adding and removing game elements.
+7. Created constant variables for `GameApp` constructor's default values.
 
 ## `recipe/recipe.py` and `recipe/main.py`
+
+**Changes made:**
+
 
 This uses a `dataclass`, which requires Python 3.7.
 
